@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Contact
+{% endblock %}
+
+{% block main %}
+
+    <div class="container">
+      <main>
+        <div class="py-5 text-left">
+          <h1 style="font-size: 8rem;">Contact —</h1>
+        </div>
+
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-md-6">
+              <h1 style="font-size: 3rem;">Drop me a line —</h1>
+              <p class="lead">Please feel free to reach out if you have any questions or would like to discuss a project.</p>
+              <h4>Email:</h4>
+              <p class="text-muted" style="font-size: 2.5rem;">craqvfx@gmail.com</p>
+              <h4>Phone:</h4>
+              <p class="text-muted" style="font-size: 2.5rem;">+44 (0) 7857 423006</p>
+            </div>
+
+            <div class="col-md-6">
+              <h1 style="font-size: 3rem;">Make an enquiry —</h1>
+              <form class="needs-validation" action="https://formspree.io/f/xyzklyla" method="POST" novalidate>
+                <div class="row g-3">
+                    <div class="col-12">
+                      <label for="Name" class="form-label">First name *</label>
+                      <input type="text" class="form-control" id="Name" name="name" placeholder="Name" required>
+                    <div class="invalid-feedback">Valid name is required.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="message" class="form-label">Message *</label>
+                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                  <div class="invalid-feedback">Please enter your message.</div>
+              </div>
+
+                  <hr class="my-4">
+
+                  <button class="w-100 btn btn-primary btn-lg" type="submit">Submit Enquiry →</button>
+                </div>
+              </form>
+              <p class="text-muted" style="font-size: 0.65rem;"><br>By submitting this form you consent to having your data stored and handled by Christian Boland Ross.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+{% endblock%}

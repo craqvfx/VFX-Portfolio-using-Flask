@@ -1,0 +1,21 @@
++----+----------------------------+
+| id |           title            |
++----+----------------------------+
+| 1  | Glytch Energy X EvokeExile |
+| 2  | Monster Energy             |
+| 3  | Editor League Season 1     |
+| 4  | Your Card. Your Colours.   |
+| 5  | Neon short                 |
+| 6  | Dipsuo MEP                 |
+| 7  | Unreleased Project         |
+| 8  | Unreleased Project         |
++----+----------------------------+
+
+UPDATE projects SET Description = '
+Commissioned by EvokeExile (now Vyre Empire) to announce Glytch Energy’s sponsorship of their eSports team, this project involved the creation of high-quality visual assets for promotional use.
+<br><br>
+The production process came with several challenges—most notably, due to a miscommunication, I was not provided with official label textures from Glytch. To overcome this limitation, I employed a combination of advanced techniques including texture projection, de-lighting, and AI upscaling. These methods enabled me to extract clean, high-resolution textures from product renders while preserving text readability and intricate design details.
+<br><br>
+The final visuals were delivered to great satisfaction, and the collaboration with both EvokeExile and Glytch proved to be highly successful. We look forward to continuing our work together on future projects.
+'
+WHERE id = 1;

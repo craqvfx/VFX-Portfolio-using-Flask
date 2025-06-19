@@ -1,0 +1,23 @@
+{% extends "minimalist_layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+
+      <!-- Background Video -->
+      <div class="video-container">
+        <video autoplay loop muted playsinline>
+          <source src="static/media/portfolio.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div> <!-- Overlay for opacity -->
+      </div>
+
+      <main class="px-3">
+        <h1>3D Visuals and Graphics Programming</h1>
+        <p class="lead">Freelance 3D Generalist and Video Editor based out of London<br>Email for business enquiries | craqvfx@gmail.com</p>
+        <p class="lead">
+          <a href="portfolio" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
+        </p>
+      </main>
+{% endblock %}

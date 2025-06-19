@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% set project = project[id] %}
+
+{% block title %}
+    {{ project.title }}
+{% endblock %}
+
+{% block main %}
+    <main>
+      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 square-div"
+            style="background-image: url(static/media/{{project.id}}/hero.webp); background-size: cover; background-position: center; height: 91vh;">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+          <h1 class="display-4 fw-normal">{{ project.title }}</h1>
+          <p class="lead fw-normal">{{ project.subtitle }}</p>
+          <a class="btn btn-outline-light" href="#media">View Media</a>
+        </div>
+      </div>
+
+      <div id = "media">
+        <div class="container my-5" style="max-width: 90vw;">
+          <div class="row g-3 row-cols-1 row-cols-md-4" style="--bs-gutter-x: 1rem;">
+
+            <!--description-->
+            <div class="col-md-12 d-md-flex align-items-stretch p-4">
+              <div class="collage-box-text d-flex">
+                <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center w-100">
+                  <div class="col-md-10 p-lg-8 mx-auto my-4">
+                    <h1 class="display-4 fw-normal">{{ project.title }}</h1>
+                    <p class="lead fw-normal">{{ project.Description | safe }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--video-->
+            <div class="col-md-12 d-md-flex align-items-stretch">
+                <video autoplay loop muted playsinline class="collage-box" style="height: 40vw; object-fit: cover;">
+                  <source src="static/media/portfolio.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!--images-->
+
+            <!--row 1-->
+            <div class="col-md-4 d-md-flex align-items-stretch">
+              <div class="collage-box" style="height: 29vw; background-image: url(static/media/{{project.id}}/1.webp);"></div>
+            </div>
+            <div class="col-md-4 d-md-flex align-items-stretch">
+              <div class="collage-box" style="height: 29vw; background-image: url(static/media/{{project.id}}/hero.webp);"></div>
+            </div>
+            <div class="col-md-4 d-md-flex align-items-stretch">
+              <div class="collage-box" style="height: 29vw; background-image: url(static/media/{{project.id}}/2.webp);"></div>
+            </div>
+
+            <!--row 2-->
+            <div class="col-md-12 d-md-flex align-items-stretch">
+              <div class="collage-box" style="height: 40vw; background-image: url(static/media/{{project.id}}/3.webp);"></div>
+            </div>
+
+            <!--row 3-->
+            <div class="col-md-7 d-md-flex align-items-stretch">
+              <div class="collage-box" style="height: 29vw; background-image: url(static/media/{{project.id}}/4.webp);"></div>
+            </div>
+            <div class="col-md-5 d-md-flex align-items-stretch">
+              <div class="collage-box" style="height: 29vw; background-image: url(static/media/{{project.id}}/5.webp);"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+          <h1 class="display-4 fw-normal">Lets work together!</h1>
+          <p class="lead fw-normal">Ready to talk about your project? Let’s start a conversation and see how I can help you.</p>
+          <a class="btn btn-outline-secondary" href="contact">Get in touch</a>
+        </div>
+      </div>
+
+    </main>
+
+{% endblock%}
+
