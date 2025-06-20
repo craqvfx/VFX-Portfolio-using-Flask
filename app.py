@@ -29,12 +29,12 @@ def about_me():
 @app.route("/portfolio")
 def portfolio():
     # Get the 'project' query parameter from the URL
-    project_name = request.args.get("project")
+    project_num = request.args.get("project")
 
-    if project_name:
+    if project_num:
         # Query for a specific project
         project = db.execute("SELECT * FROM projects")
-        return render_template("project.html", project=project, id=int(project_name))
+        return render_template("project.html", project=project, id=int(project_num))
     else:
         # Query for all projects
         portfolio = db.execute("SELECT * FROM projects ORDER BY Priority")
