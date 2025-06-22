@@ -40,17 +40,6 @@ def portfolio():
         portfolio = db.execute("SELECT * FROM projects ORDER BY Priority")
         return render_template("portfolio.html", portfolio=portfolio)
 
-#@app.route("/portfolio", methods=["GET", "POST"])
-#def portfolio():
-#    if request.method == "GET":
-#        portfolio = db.execute("SELECT * FROM projects")
-#        return render_template("portfolio.html", portfolio=portfolio)
-#    else:
-#        projectName = request.form.get("project")
-#        project = db.execute("SELECT * FROM projects WHERE title = ?", projectName)
-#        return render_template("portfolio.html", project=project)
-
-
 @app.route("/project", methods=["GET", "POST"])
 def project():
     if request.method == "GET":
