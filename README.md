@@ -1,22 +1,24 @@
 # VFX Portfolio using Flask
-#### Video Demo:  <URL HERE>
-#### Description:
-Web app for my portfolio, made using flask.
+## Video Demo:  https://youtu.be/1TyJGXoerXU
+## Description:
+Web app for my VFX portfolio, made using flask.
 Bootstrap was used for basic CSS styling and as a template, using the [Product Template](https://getbootstrap.com/docs/4.0/examples/product/).
 
-Directory:
-[Pages](#pages)
-    [Standard sections](#standard-sections:)
-    [Home](#home:)
-    [Portfolio](#portfolio:)
-    [Contact](#contact:)
-    [About Me](#about-me:)
-[UX]{#UX:}
-[File organisation](#file-organisation:)
-[Python Anywhere](#pythonanywhere-hosting:)
+Directory:<br>
+
+[Pages:](#pages)
+- [Standard sections](#standard-sections:)<br>
+- [Home](#home:)<br>
+- [Portfolio](#portfolio:)<br>
+- [Contact](#contact:)<br>
+- [About Me](#about-me:)<br>
+
+[UX](#UX:)<br>
+[File organisation](#file-organisation:)<br>
+[Python Anywhere hosting](#pythonanywhere-hosting:)<br>
 
 
-#### Pages
+### Pages
 There are 4 main pages, each of which have some standard sections, each explained hereafter:
 
 #### Standard sections:
@@ -44,7 +46,7 @@ Contact form made using Formspree for a mailmerge. Uses 'contact.html'
 #### About Me:
 Simple About Me page rendered using 'about_me.hmtl'.
 
-#### UX:
+### UX:
 The General system flow is as follows:
 '''
 Splash screen -> Portfolio -> Individual project -> Contact Me
@@ -59,10 +61,11 @@ It is not expected that the user must visit the 'About Me' page, that is a volun
 '/static/media/{project_num}' stores media (still frames and videos) for the corresponding project, where '{project_num}' represents the 'id' attribute in 'projects.db'
 
 
-#### PythonAnywhere Hosting
+### PythonAnywhere Hosting
 1. Create venv e.g. 'mkvirtualenv myvirtualenv ...'
 2. git clone using PAT (private access token) as password
- - if new PAT needed, go to github settings and generate a temporary classic PAT
+> [!TIP]
+> If new PAT needed, go to github settings and generate a temporary classic PAT
 3. cd into project directory using 'cd craqvfx' or relevant project name.
 4. Install dependencies using 'pip -r install requirements.txt'
 5. change wgip file to
