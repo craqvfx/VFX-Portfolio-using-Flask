@@ -7,15 +7,15 @@ Bootstrap was used for basic CSS styling and as a template, using the [Product T
 ## Directory:<br>
 
 [Pages:](#pages)
-- [Standard sections](#standard-sections:)<br>
-- [Home](#home:)<br>
-- [Portfolio](#portfolio:)<br>
-- [Contact](#contact:)<br>
-- [About Me](#about-me:)<br>
+- [Standard sections](#standard-sections)
+- [Home](#home)
+- [Portfolio](#portfolio)
+- [Contact](#contact)
+- [About Me](#about-me)
 
-[UX](#UX:)<br>
-[File organisation](#file-organisation:)<br>
-[Python Anywhere hosting](#pythonanywhere-hosting:)<br>
+[UX](#ux)<br>
+[File organisation](#file-organisation)<br>
+[Python Anywhere hosting](#pythonanywhere-hosting)<br>
 
 ##
 
