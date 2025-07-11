@@ -4,6 +4,11 @@
 Web app for my VFX portfolio, made using flask.<br>
 Bootstrap was used for basic CSS styling and as a template, using the [Product Template](https://getbootstrap.com/docs/4.0/examples/product/).
 
+## Feature ideas:
+- github integration - dynamically render projects with api calls?<br>
+- coding portfolio section<br>
+- refactor About Me section with education, linkedin?, cv, work history etc.
+
 ## Directory:<br>
 
 [Pages:](#pages)
