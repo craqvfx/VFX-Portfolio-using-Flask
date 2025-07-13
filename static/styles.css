@@ -35,7 +35,6 @@ html {
   color: white; /* Ensures text remains visible */
   background-size: cover;
   background-position: center;
-  text: white;
   overflow: hidden;
 }
 
