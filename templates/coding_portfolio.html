@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Christian Boland Ross
+{% endblock %}
+
+{% block main %}
+    <div class="container py-5">
+        {% if repos %}
+            {% for repo in repos %}
+            <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+                <div class="github-repo-card me-md-3 p-3 p-md-4">
+                    <div class="repo-content">
+
+                        <div class="social-preview-container">
+                            <img src="https://opengraph.githubassets.com/gh/{{username}}/{{ repo['name'] }}"
+                                alt="{{ repo['name'] }} social preview"
+                                class="social-preview-image"
+                                loading="lazy">
+                        </div>
+
+                        <h3 class="repo-title">
+                            <a href="{{ repo['url'] }}" target="_blank" class="title-link">
+                                {{ repo['name'] }}
+                                <span class="external-icon"></span>
+                            </a>
+                        </h3>
+                        
+
+                        <p class="repo-description">{{ repo['description'] or "No description available" }}</p>
+
+                        <div class="repo-links">
+                            <a href="{{ repo['url'] }}" target="_blank" class="github-btn">
+                                <i class="bi bi-github"></i> View on GitHub
+                            </a>
+                        </div>
+
+                        <div class="repo-meta">
+                            {% if repo.language %}
+                            <span class="language-badge">
+                                <span class="language-color" style="background-color: {{ language_colors.get(repo.language, '#8b949e') }}"></span>
+                                {{ repo.language }}
+                            </span>
+                            {% endif %}
+                            <span class="updated-at ms-3">
+                                <i class="bi bi-clock"></i> Updated {{ repo.updated_at }}
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-warning">
+                <i class="bi bi-cloud-slash"></i> Temporary data unavailable - 
+                GitHub API limits exceeded. Check back soon or 
+                <a href="https://github.com/{{ username }}?tab=repositories" target="_blank">
+                    view on GitHub directly
+                </a>.
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
