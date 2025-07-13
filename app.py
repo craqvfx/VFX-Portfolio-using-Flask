@@ -3,9 +3,8 @@ import cs50
 
 import urllib.parse
 
-from urllib.parse import unquote
 from cs50 import SQL
-from flask import Flask, flash, redirect, render_template, request
+from flask import Flask, redirect, render_template, request
 
 # Configure application
 app = Flask(__name__)
@@ -48,3 +47,18 @@ def project():
         projectName = request.form.get("project")
         project = db.execute("SELECT * FROM projects WHERE title = ?", projectName)
         return render_template("portfolio.html", project=project)
+
+@app.before_request
+def force_https():
+    if request.headers.get('X-Forwarded-Proto', 'http') != 'https':
+        return redirect(request.url.replace('http://', 'https://'), code=301)
+
+@app.after_request
+def set_security_headers(response):
+    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+    response.headers["Content-Security-Policy"] = "default-src 'self';"
+    response.headers["X-Frame-Options"] = "SAMEORIGIN"
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["Referrer-Policy"] = "no-referrer-when-downgrade"
+    response.headers["Permissions-Policy"] = "geolocation=(), microphone=()"
+    return response
