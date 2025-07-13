@@ -34,7 +34,7 @@ def portfolio():
     else:
         # Query for all projects
         portfolio = db.execute("SELECT * FROM projects ORDER BY Priority")
-        return render_template("portfolio.html", portfolio=portfolio)
+        return render_template("vfx_portfolio.html", portfolio=portfolio)
 
 @app.route("/project", methods=["GET", "POST"])
 def project():
@@ -43,4 +43,4 @@ def project():
     else:
         projectName = request.form.get("project")
         project = db.execute("SELECT * FROM projects WHERE title = ?", projectName)
-        return render_template("portfolio.html", project=project)
+        return render_template("vfx_portfolio.html", project=project)
