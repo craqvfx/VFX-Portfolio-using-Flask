@@ -87,7 +87,7 @@ from app import app as application
 ```
 7. update source code directory, venv directory, etc. in pythonanywhere web section
 6. It may be necessary to use absolute file path if an error is recieved that states projects.db does not exist:
-db = SQL("sqlite:////home/craqvfx/craqvfx/projects.db")
+db = SQL("sqlite:////home/craqvfx/VFX-Portfolio-using-Flask/projects.db")
 7. reload app
 > [!TIP]
 > Troubleshoot using server log or access log
