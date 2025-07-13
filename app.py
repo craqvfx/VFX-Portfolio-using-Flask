@@ -1,6 +1,3 @@
-import os
-import cs50
-
 import urllib.parse
 
 from cs50 import SQL
@@ -47,11 +44,6 @@ def project():
         projectName = request.form.get("project")
         project = db.execute("SELECT * FROM projects WHERE title = ?", projectName)
         return render_template("portfolio.html", project=project)
-
-@app.before_request
-def force_https():
-    if request.headers.get('X-Forwarded-Proto', 'http') != 'https':
-        return redirect(request.url.replace('http://', 'https://'), code=301)
 
 @app.after_request
 def set_security_headers(response):
