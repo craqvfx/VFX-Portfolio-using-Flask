@@ -44,24 +44,3 @@ def project():
         projectName = request.form.get("project")
         project = db.execute("SELECT * FROM projects WHERE title = ?", projectName)
         return render_template("portfolio.html", project=project)
-
-@app.after_request
-def set_security_headers(response):
-    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
-    response.headers["Content-Security-Policy"] = (
-        "default-src 'none'; "
-        "script-src 'self' https://cdn.jsdelivr.net; "
-        "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; "
-        "img-src 'self' data: https://cdn.jsdelivr.net; "
-        "font-src 'self' https://cdn.jsdelivr.net; "
-        "connect-src 'self' https://formspree.io; "
-        "frame-ancestors 'none'; "
-        "base-uri 'self'; "
-        "form-action 'self' https://formspree.io; "
-        "object-src 'none';"  # Critical: Blocks Flash/PDF plugins that can be attack vectors
-    )
-    response.headers["X-Frame-Options"] = "SAMEORIGIN"
-    response.headers["X-Content-Type-Options"] = "nosniff"
-    response.headers["Referrer-Policy"] = "no-referrer-when-downgrade"
-    response.headers["Permissions-Policy"] = "geolocation=(), microphone=()"
-    return response
