@@ -12,39 +12,33 @@
     <link rel="icon" type="image/x-icon" href="/static/media/headshot.jpg">
   </head>
 
-  <body>
-
+  <body class="{% block body_class %}{% endblock %}">
 
     {% set current_path = request.path %}
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
       <header class="mb-auto">
         <div>
-          <h3 class="float-md-start mb-0" style="color:Black;">Christian Boland Ross</h3>
+          <h3 class="float-md-start mb-0";">Christian Boland Ross</h3>
           <nav class="nav nav-masthead justify-content-center float-md-end">
             <a class="nav-link {% if current_path == '/' %}active{% endif %}"
-               href="/"
-               style="color: {% if current_path == '/' %}#505050{% else %}#757575{% endif %};">
+               href="/">
               Home
             </a>
             <a class="nav-link {% if current_path == '/vfx_portfolio' %}active{% endif %}"
-               href="/vfx_portfolio"
-               style="color: {% if current_path == '/vfx_portfolio' %}#505050{% else %}#757575{% endif %};">
+               href="/vfx_portfolio">
               VFX
             </a>
             <a class="nav-link {% if current_path == '/coding_portfolio' %}active{% endif %}"
-               href="/coding_portfolio"
-               style="color: {% if current_path == '/coding_portfolio' %}#505050{% else %}#757575{% endif %};">
+               href="/coding_portfolio">
               Coding
             </a>
             <a class="nav-link {% if current_path == '/contact' %}active{% endif %}"
-               href="/contact"
-               style="color: {% if current_path == '/contact' %}#505050{% else %}#757575{% endif %};">
-              Contact
+               href="/contact">
+               Contact
             </a>
             <a class="nav-link {% if current_path == '/about_me' %}active{% endif %}"
-               href="/about_me"
-               style="color: {% if current_path == '/about_me' %}#505050{% else %}#757575{% endif %};">
-              About Me
+               href="/about_me">
+               About Me
             </a>
           </nav>
         </div>
@@ -59,11 +53,11 @@
       <footer class="container py-5" style="color:#000000;">
         <div class="row">
           <div class="col-12 col-md">
-            <small class="d-block mb-3 text-muted">&copy; Christian Boland Ross 2025</small>
+            <small class="d-block mb-3 footer-text" class="footer-text">&copy; Christian Boland Ross 2025</small>
           </div>
 
           <div class="col-6 col-md">
-            <h5>Sitemap</h5>
+            <h5 class="footer-text">Sitemap</h5>
             <ul class="list-unstyled text-small">
               <li><a class="link-secondary" href="/">Home</a></li>
               <li><a class="link-secondary" href="vfx_portfolio">VFX</a></li>
@@ -74,7 +68,7 @@
           </div>
 
           <div class="col-6 col-md">
-            <h5>Socials</h5>
+            <h5 class="footer-text">Socials</h5>
             <ul class="list-unstyled text-small">
               <li><a class="link-secondary" href="https://www.linkedin.com/in/christian-boland-ross/" target="_blank">LinkedIn</a></li>
               <li><a class="link-secondary" href="https://github.com/craqvfx" target="_blank">GitHub</a></li>
@@ -85,7 +79,7 @@
           </div>
 
           <div class="col-6 col-md">
-            <h5>Contact</h5>
+            <h5 class="footer-text">Contact</h5>
             <ul class="list-unstyled text-small">
               <li><a class="link-secondary" href="contact">Email</a></li>
               <li><p class="text-muted";>+44 (0) 7857 423006</p></li>
