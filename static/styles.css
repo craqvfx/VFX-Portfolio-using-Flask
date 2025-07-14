@@ -229,7 +229,7 @@ html {
 
 /* Default full opacity */
 .cards-container:hover .github-repo-card {
-    opacity: 0.8;
+    opacity: 0.6;
     transform: scale(0.99);
 }
 
