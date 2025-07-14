@@ -178,18 +178,34 @@ html {
     --github-green: #3fb950;
 }
 
+.cards-container {
+/*   Horizontal layout
+  display: flex;
+  gap: 16px;
+*/
+}
+
+/* Default full opacity */
+.cards-container:hover .github-repo-card {
+    opacity: 0.8;
+    transform: scale(0.99);
+}
+
+.cards-container:hover .github-repo-card:hover {
+    opacity: 1;
+    border-color: #58a6ff;
+    box-shadow: 0 8px 24px rgba(88, 166, 255, 0.6),
+                0 0 20px rgba(88, 166, 255, 0.4); 
+    transform: scale(1.01);
+}
+
 .github-repo-card {
     background-color: var(--github-dark-2);
     border: 1px solid #30363d;
     border-radius: 12px;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     color: var(--github-light);
     margin-bottom: 16px;
-}
-
-.github-repo-card:hover {
-    border-color: #58a6ff;
-    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.15);
 }
 
 .repo-title {
