@@ -12,13 +12,15 @@
     <link rel="icon" type="image/x-icon" href="/static/media/headshot.jpg">
   </head>
 
+  {% block scripts %}{% endblock %}
+
   <body class="{% block body_class %}{% endblock %}">
 
     {% set current_path = request.path %}
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
       <header class="mb-auto">
         <div>
-          <h3 class="float-md-start mb-0";">Christian Boland Ross</h3>
+          <h3 class="float-md-start mb-0">Christian Boland Ross</h3>
           <nav class="nav nav-masthead justify-content-center float-md-end">
             <a class="nav-link {% if current_path == '/' %}active{% endif %}"
                href="/">
@@ -53,7 +55,7 @@
       <footer class="container py-5" style="color:#000000;">
         <div class="row">
           <div class="col-12 col-md">
-            <small class="d-block mb-3 footer-text" class="footer-text">&copy; Christian Boland Ross 2025</small>
+            <small class="d-block mb-3 footer-text">&copy; Christian Boland Ross 2025</small>
           </div>
 
           <div class="col-6 col-md">
@@ -82,16 +84,17 @@
             <h5 class="footer-text">Contact</h5>
             <ul class="list-unstyled text-small">
               <li><a class="link-secondary" href="contact">Email</a></li>
-              <li><p class="text-muted";>+44 (0) 7857 423006</p></li>
+              <li><p class="footer-text">+44 (0) 7857 423006</p></li>
             </ul>
           </div>
 
         </div>
       </footer>
-    </div>
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="JS/form-validation.js"></script> <!-- External JS File -->
+    <script src="JS/form-validation.js"></script>
+    <!--<script src="JS/page_transition.js"></script>-->
+
 
   </body>
 </html>

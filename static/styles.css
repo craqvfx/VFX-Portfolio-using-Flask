@@ -44,7 +44,7 @@ body {
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(0, 0, 0, .25);
+  border-bottom-color: var(--nav-link-color);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -236,7 +236,8 @@ html {
 .cards-container:hover .github-repo-card:hover {
     opacity: 1;
     border-color: #58a6ff;
-    box-shadow: 0 8px 24px rgba(88, 166, 255, 0.6),
+    box-shadow: inset 0 0 10px rgba(88, 166, 255, 0.4),
+                0 0 24px rgba(88, 166, 255, 0.6),
                 0 0 20px rgba(88, 166, 255, 0.4); 
     transform: scale(1.01);
 }
@@ -378,6 +379,26 @@ html {
 .repo-title a.title-link:hover::after {
     opacity: 1;
     transform: translate(2px, -2px);
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade.show {
+    opacity: 1;
+}
+
+#matrix-explosion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1.5s ease;
 }
 
 /* Bootstrap Icons */
