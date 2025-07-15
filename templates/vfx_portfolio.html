@@ -10,7 +10,9 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5">
           <h1 class="display-4 fw-normal">Stunning Visuals</h1>
           <p class="lead fw-normal">Specializing in 3D and VFX, I prioritize technical precision to ensure high-quality results. <!--With industry experience at both Glassworks and <abbr title="Important Looking Pirates">ILP</abbr> London, I have the expertise to bring your vision to life.--></p>
-          <a class="btn btn-outline-secondary" href="#projects-section">View Projects</a>
+          <div class = "button-container">
+            <a class="white-btn" href="#projects-section">View Projects</a>
+          </div>
         </div>
       </div>
 
@@ -27,7 +29,13 @@
       <div class="content">
         <h2 class="display-5">{{ project.title }}</h2>
         <p class="lead">{{ project.subtitle }}</p>
-        <a href="/vfx_portfolio?project={{ project.id - 1}}" class="btn btn-outline-light">View Project</a> <!-- Button with link -->
+        <div class = "button-container">
+          <a href="/vfx_portfolio?project={{ project.id - 1}}"
+            class="white-btn"
+            style ="color: white; background-color: transparent;">
+            View Project
+          </a>
+        </div>
       </div>
     </div>
 
@@ -40,7 +48,13 @@
         <div class="content">
           <h2 class="display-5">{{ project.title }}</h2>
           <p class="lead">{{ project.subtitle }}</p>
-          <a href="/vfx_portfolio?project={{ project.id - 1}}" class="btn btn-outline-light">View Project</a> <!-- Button with link -->
+          <div class = "button-container">
+            <a href="/vfx_portfolio?project={{ project.id - 1}}"
+              class="white-btn btn-outline-light"
+              style="color: white; background-color: transparent;">
+              View Project
+            </a>
+          </div>
         </div>
       </div>
     {% endif %}
@@ -79,8 +93,9 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5">
           <h1 class="display-4 fw-normal">Lets work together!</h1>
           <p class="lead fw-normal">Ready to talk about your project? Let’s start a conversation and see how I can help you.</p>
-          <a class="btn btn-outline-secondary" href="contact">Get in touch</a>
-        </div>
+          <div class="button-container">
+            <a class="white-btn" href="contact">Get in touch</a>
+          </div>
       </div>
 
     </main>
