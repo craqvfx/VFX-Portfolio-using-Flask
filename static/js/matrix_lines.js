@@ -21,7 +21,7 @@ function initMatrixAnimation(canvasId = 'matrix-explosion') {
         ctx.fillStyle = 'rgba(13, 17, 23, 0.04)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        ctx.fillStyle = '#58a6ffa8';
+        ctx.fillStyle = '#58a6ffff';
         ctx.font = `${fontSize}px monospace`;
 
         for (let i = 0; i < drops.length; i++) {
