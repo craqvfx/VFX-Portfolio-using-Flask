@@ -184,6 +184,29 @@ html {
   background: rgba(0, 0, 0, 0.6); /* Dark overlay with 40% transparency */
 }
 
+.hero-section {
+  position: relative;
+  background-size: cover;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust opacity here */
+}
+
+.hero-section > * {
+  position: relative; /* Makes content appear above overlay */
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
 .collage-box {
   background-color: rgba(0, 0, 0, 0.02);
   width: 100%;
