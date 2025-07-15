@@ -11,7 +11,11 @@
           <h1 class="display-4 fw-normal">Stunning Visuals</h1>
           <p class="lead fw-normal">Specializing in 3D and VFX, I prioritize technical precision to ensure high-quality results. <!--With industry experience at both Glassworks and <abbr title="Important Looking Pirates">ILP</abbr> London, I have the expertise to bring your vision to life.--></p>
           <div class = "button-container">
-            <a class="white-btn" href="#projects-section">View Projects</a>
+            <a class="white-btn"
+              href="#projects-section"
+              style="color: black; background-color: transparent;">
+              View Projects
+            </a>
           </div>
         </div>
       </div>
@@ -31,8 +35,7 @@
         <p class="lead">{{ project.subtitle }}</p>
         <div class = "button-container">
           <a href="/vfx_portfolio?project={{ project.id - 1}}"
-            class="white-btn"
-            style ="color: white; background-color: transparent;">
+            class="white-btn">
             View Project
           </a>
         </div>
@@ -50,8 +53,7 @@
           <p class="lead">{{ project.subtitle }}</p>
           <div class = "button-container">
             <a href="/vfx_portfolio?project={{ project.id - 1}}"
-              class="white-btn btn-outline-light"
-              style="color: white; background-color: transparent;">
+              class="white-btn btn-outline-light">
               View Project
             </a>
           </div>

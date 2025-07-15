@@ -293,8 +293,8 @@ html {
 }
 
 .white-btn {
-    background-color: white;
-    color: #333;
+    background-color: #7a7a7a74;
+    color: white;
     border: 1px solid #d0d7de;
     padding: 10px 20px;
     border-radius: 6px;
@@ -317,10 +317,16 @@ html {
 .button-container:hover .white-btn {
     opacity: 0.6;
     transform: scale(0.95);
+    background-color: transparent;
+    color: white;
+
 }
 
 .button-container:hover .white-btn:hover {
     opacity: 1;
+        background-color: white;
+        color: black;
+
     border-color: #58a6ff;
     box-shadow: inset 0 0 10px rgba(88, 166, 255, 0.4),
                 0 0 24px rgba(88, 166, 255, 0.6),
