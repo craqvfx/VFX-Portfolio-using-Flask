@@ -17,6 +17,21 @@ function initMatrixAnimation(canvasId = 'matrix-explosion') {
     const columns = canvas.width / fontSize;
     const drops = Array(Math.floor(columns)).fill(0);
 
+    // Animation timing control
+    const startTime = Date.now();
+    const transitionDuration = 3000; // 3 seconds
+    const minDelay = 1;
+    const maxDelay = 50;
+
+    function getCurrentDelay() {
+        const elapsed = Date.now() - startTime;
+        if (elapsed >= transitionDuration) {
+            return maxDelay; // Floor at 50ms after transition
+        }
+        // Linear transition from minDelay to maxDelay
+        return minDelay + (maxDelay - minDelay) * (elapsed / transitionDuration);
+    }
+
     function animate() {
         ctx.fillStyle = 'rgba(13, 17, 23, 0.04)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -34,13 +49,12 @@ function initMatrixAnimation(canvasId = 'matrix-explosion') {
             drops[i]++;
         }
 
-        //requestAnimationFrame(animate);
-        setTimeout(() => requestAnimationFrame(animate), 50);  // 50ms delay ~20fps
-
+        const currentDelay = getCurrentDelay();
+        setTimeout(() => requestAnimationFrame(animate), currentDelay);
     }
 
     setTimeout(() => {
-        canvas.style.opacity = '0.3';
+        canvas.style.opacity = '0.5';
         animate();
     }, 300);
 }
