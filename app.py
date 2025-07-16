@@ -80,3 +80,12 @@ def coding_portfolio():
 
     print("Final data being sent to template:", repo_data)  # Debug line
     return render_template("coding_portfolio.html", repos=repo_data, username=username, language_colors=language_colors)
+
+# For google site ownership verification
+@app.route('/google829e6f2aa0273ad6.html')
+def google_verification():
+    return app.send_static_file('google829e6f2aa0273ad6.html')
+
+@app.route('/sitemap.xml')
+def sitemap():
+    return app.send_static_file('sitemap.xml')
