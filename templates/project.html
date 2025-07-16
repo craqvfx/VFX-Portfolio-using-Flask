@@ -2,7 +2,11 @@
 {% set project = project[id] %}
 
 {% block title %}
-    {{ project.title }}
+Christian Boland Ross | {{ project.title }}
+{% endblock %}
+
+{% block description %}
+{{ project.Description | safe }}
 {% endblock %}
 
 {% block main %}
