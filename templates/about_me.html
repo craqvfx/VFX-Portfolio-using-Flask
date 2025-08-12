@@ -9,34 +9,47 @@ Learn about Christian Boland Ross – a creative technologist combining VFX, cod
 {% endblock %}
 
 {% block main %}
-    <div class="container py-5">
+    <div class="container py-5" >
       <div class="row align-items-center">
-          <!-- Left Column: Name -->
-          <div class="col-md-6">
-              <h1 style="font-size: 5rem;">About Me</h1>
-          </div>
-
-          <!-- Right Column: Circular Picture -->
-          <div class="col-md-6 text-center">
-              <img src="static/media/headshot.jpg" alt="Christian Boland Ross" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
-          </div>
-      </div>
-
-      <div class="row">
-          <div class="col-12">
-              <p style="font-size: 1.2rem; color: #333;">
+        <!-- Left Column: Name -->
+        <div class="col-md-6">
+            <h1 style="font-size: 3rem;">Christian Boland Ross</h1>
+            <p style="font-size: 1.2rem; color: #333;">
                 <br>
-                  Hi, I'm Christian Boland Ross - a computer science student and freelance 3D generalist with a strong foundation in both software development and digital media production.
-                  I work at the intersection of code and creativity, blending technical problem-solving with visual storytelling.
-              </p>
-              <p style="font-size: 1.2rem; color: #333;">
+                Specializing in 3D and VFX, I prioritize technical precision to ensure high-quality results.
+                <!--Hi, I'm Christian Boland Ross - a computer science student and freelance 3D generalist with a strong foundation in both software development and digital media production.
+                I work at the intersection of code and creativity, blending technical problem-solving with visual storytelling.-->
+            </p>
+
+            <div class="button-container" style="margin: 0;">
+                <a class="white-btn" href="contact" style="color: black; background-color: transparent;">Learn More</a>
+                <a class="white-btn" href="contact" style="color: #ffffff; background-color: var(--cta-blue);">Contact</a>
+            </div>
+        </div>
+
+        <!-- Right Column: Circular Picture -->
+        <div class="col-md-6 text-center">
+            <img 
+                src="static/media/headshot.jpg" 
+                alt="Christian Boland Ross" 
+                class="img-fluid" 
+                style="width: 35rem; height: 35rem; object-fit: cover; border-radius: 15px;"
+            >
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+
+            <p style="font-size: 1.2rem; color: #333;">
                 Since 2023, I’ve been freelancing in the VFX space—both independently and as part of Visionary VFX (visionaryvfx.org), a small studio where I’ve contributed to projects across the full production pipeline, from pre-visualization and asset development to compositing and color grading.
                 This hands-on experience has sharpened my ability to collaborate effectively, adapt quickly, and deliver high-quality results under tight deadlines.
-                <br><br>
+            <br><br>
                 I got in contact with the Owner, my good friend Joel Calorte, and he gave me this reference:
-                <br>
-                </p>
-                <blockquote class="blockquote ps-3 border-start border-3">
+            <br>
+            </p>
+
+            <blockquote class="blockquote ps-3 border-start border-3">
                 “
                 <br>
                     Chris is an exceptional professional, consistently approaching every project
@@ -49,15 +62,17 @@ Learn about Christian Boland Ross – a creative technologist combining VFX, cod
                     Owner of Visionary Studios
                 <br>
                 ”
-                </blockquote>
-                <p style="font-size: 1.2rem; color: #333;">
+            </blockquote>
+
+            <p style="font-size: 1.2rem; color: #333;">
                 My core tools include Blender for 3D work and DaVinci Resolve (Fusion) for editing and compositing.
                 I also have working knowledge of After Effects, Houdini, Nuke, Substance Painter, and Unreal Engine.
                 While my current focus is on 3D/VFX, my background in computer science gives me an edge when it comes to scripting, pipeline automation, and understanding the technical side of production tools.
                 I'm always looking for opportunities that push both my creative and technical boundaries.
-              </p>
-          </div>
-      </div>
-  </div>
+            </p>
+
+        </div>
+    </div>
+</div>
 
 {% endblock %}
