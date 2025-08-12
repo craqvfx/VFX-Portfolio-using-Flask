@@ -9,32 +9,46 @@ Learn about Christian Boland Ross – a creative technologist combining VFX, cod
 {% endblock %}
 
 {% block main %}
-    <div class="container py-5" >
-      <div class="row align-items-center">
-        <!-- Left Column: Name -->
-        <div class="col-md-6">
-            <h1 style="font-size: 3rem;">Christian Boland Ross</h1>
-            <p style="font-size: 1.2rem; color: #333;">
-                <br>
-                Specializing in 3D and VFX, I prioritize technical precision to ensure high-quality results.
-                <!--Hi, I'm Christian Boland Ross - a computer science student and freelance 3D generalist with a strong foundation in both software development and digital media production.
-                I work at the intersection of code and creativity, blending technical problem-solving with visual storytelling.-->
-            </p>
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <!-- Left Column: Name -->
+            <div class="col-md-6">
+                <h1 style="font-size: 3rem;">Christian Boland Ross</h1>
+                <p style="font-size: 1.2rem; color: #333;">
+                    <br>
+                    Specializing in 3D and VFX, I prioritize technical precision to ensure high-quality results.
+                </p>
 
-            <div class="button-container" style="margin: 0;">
-                <a class="white-btn" href="contact" style="color: black; background-color: transparent;">Learn More</a>
-                <a class="white-btn" href="contact" style="color: #ffffff; background-color: var(--cta-blue);">Contact</a>
+                <div class="button-container" style="margin: 0;">
+                    <a class="white-btn" href="#about-me" style="color: black; background-color: transparent;">Learn More</a>
+                    <a class="white-btn" href="contact" style="color: #ffffff; background-color: var(--cta-blue);">Contact</a>
+                </div>
+            </div>
+
+            <!-- Right Column: Circular Picture -->
+            <div class="col-md-6 text-center">
+                <img 
+                    src="static/media/headshot.jpg" 
+                    alt="Christian Boland Ross" 
+                    class="img-fluid" 
+                    style="width: 35rem; height: 35rem; object-fit: cover; border-radius: 15px;"
+                >
             </div>
         </div>
+    </div>
 
-        <!-- Right Column: Circular Picture -->
-        <div class="col-md-6 text-center">
-            <img 
-                src="static/media/headshot.jpg" 
-                alt="Christian Boland Ross" 
-                class="img-fluid" 
-                style="width: 35rem; height: 35rem; object-fit: cover; border-radius: 15px;"
-            >
+    <div class="container py-5" id="about-me">
+        <h1 style="font-size: 3rem;">About Me</h1>
+        <p style="font-size: 1.2rem; color: #333;">
+            <br>
+            Hi, I'm Christian Boland Ross - a computer science student and freelance 3D generalist with a strong foundation in both software development and digital media production.
+            I work at the intersection of code and creativity, blending technical problem-solving with visual storytelling.
+        </p>
+
+        <div class="button-container" style="margin: 0;">
+            <a class="white-btn" href="" style="color: black; background-color: transparent;">Download CV</a>
+            <a class="white-btn" href="" style="color: black; background-color: transparent;">Showreel</a>
+            <a class="white-btn" href="contact" style="color: black; background-color: transparent;">Contact</a>
         </div>
     </div>
 
