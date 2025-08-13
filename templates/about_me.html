@@ -8,246 +8,257 @@ Christian Boland Ross | About Me
 Learn about Christian Boland Ross – a creative technologist combining VFX, coding, and design. Background, skills, and personal interests.
 {% endblock %}
 
-{% block main %}
-    <!-- Hero -->
-    <div class="container py-5">
-        <div class="row align-items-center">
-            <!-- Left Column: Name -->
-            <div class="col-md-6">
-                <h1 style="font-size: 3rem;">Christian Boland Ross</h1>
-                <p style="font-size: 1.2rem; color: #333;">
-                    <br>
-                    Specializing in 3D and VFX, I prioritize technical precision to ensure high-quality results.
-                </p>
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/stickyTitles.js') }}"></script>
+{% endblock %}
 
-                <div class="button-container" style="margin: 0;">
-                    <a class="white-btn" href="#about-me" style="color: black; background-color: transparent;">Learn More</a>
-                    <a class="white-btn" href="contact" style="color: #ffffff; background-color: var(--cta-blue);">Contact</a>
+
+{% block main %}
+<div style="display: flex; min-height: 100vh;">
+  <!-- Left Sidebar -->
+    <div style="position: relative; width: 10rem; padding-left: 6rem; padding-top: 2rem;">
+        <div style="position: fixed; top: 0; bottom: 0; left: 6rem; width: 4px; background-color: black; border-radius: 1px;"></div><!-- Line  -->
+
+        <a href="#about-me" style="text-decoration: none; color: inherit;"><h1 class="section-title" data-section="about-me" style="padding: 0.5rem;">AboutMe</h1></a>
+        <a href="#education" style="text-decoration: none; color: inherit;"><h1 class="section-title" data-section="education" style="padding: 0.5rem;">Education</h1></a>
+        <a href="#work" style="text-decoration: none; color: inherit;"><h1 class="section-title" data-section="work" style="padding: 0.5rem;">Work</h1></a>
+        <a href="#services" style="text-decoration: none; color: inherit;"><h1 class="section-title" data-section="services" style="padding: 0.5rem;">Services</h1></a>
+        <a href="#social-proof" style="text-decoration: none; color: inherit;"><h1 class="section-title" data-section="social-proof" style="padding: 0.5rem;">Brands</h1></a>
+        <a href="#cta" style="text-decoration: none; color: inherit;"><h1 class="section-title" data-section="cta" style="padding: 0.5rem;">Contact</h1></a>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div style="flex: 1;">
+        <!-- Hero -->
+        <div class="container py-5" id="hero">
+            <div class="row align-items-center">
+                <!-- Left Column: Name -->
+                <div class="col-md-6">
+                    <h1 style="font-size: 3rem;">Christian Boland Ross</h1>
+                    <p style="font-size: 1.2rem; color: #333;">
+                        <br>
+                        Specializing in 3D and VFX, I prioritize technical precision to ensure high-quality results.
+                    </p>
+
+                    <div class="button-container" style="margin: 0;">
+                        <a class="white-btn" href="#about-me" style="color: black; background-color: transparent;">Learn More</a>
+                        <a class="white-btn" href="contact" style="color: #ffffff; background-color: var(--cta-blue);">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Circular Picture -->
+                <div class="col-md-6 text-center">
+                    <img 
+                        src="static/media/headshot.jpg" 
+                        alt="Christian Boland Ross" 
+                        class="img-fluid" 
+                        style="width: 35rem; height: 35rem; object-fit: cover; border-radius: 15px;"
+                    >
                 </div>
             </div>
+        </div>
 
-            <!-- Right Column: Circular Picture -->
-            <div class="col-md-6 text-center">
-                <img 
-                    src="static/media/headshot.jpg" 
-                    alt="Christian Boland Ross" 
-                    class="img-fluid" 
-                    style="width: 35rem; height: 35rem; object-fit: cover; border-radius: 15px;"
-                >
+        <!-- About Me -->
+        <div class="container py-5" id="about-me">
+            <h1 style="font-size: 3rem;">About Me</h1>
+            <p style="font-size: 1.2rem; color: #333;">
+                <br>
+                Hi, I'm Christian Boland Ross - a computer science student and freelance 3D generalist with a strong foundation in both software development and digital media production.
+                I work at the intersection of code and creativity, blending technical problem-solving with visual storytelling.
+            </p>
+
+            <div class="button-container" style="margin: 0;">
+                <a class="white-btn" href="static/ChristianBolandRoss_2025_CV.pdf" style="color: black; background-color: transparent;">Download CV</a>
+                <a class="white-btn" href="https://www.youtube.com/watch?v=56ph0VueEWw" style="color: black; background-color: transparent;">Showreel</a>
+                <a class="white-btn" href="contact" style="color: black; background-color: transparent;">Contact</a>
             </div>
         </div>
-    </div>
 
-    <!-- About Me -->
-    <div class="container py-5" id="about-me">
-        <h1 style="font-size: 3rem;">About Me</h1>
-        <p style="font-size: 1.2rem; color: #333;">
-            <br>
-            Hi, I'm Christian Boland Ross - a computer science student and freelance 3D generalist with a strong foundation in both software development and digital media production.
-            I work at the intersection of code and creativity, blending technical problem-solving with visual storytelling.
-        </p>
+        <!-- Education -->
+        <div class="container py-5" id="education">
+            <h1 style="font-size: 3rem;">Education</h1>
 
-        <div class="button-container" style="margin: 0;">
-            <a class="white-btn" href="static/ChristianBolandRoss_2025_CV.pdf" style="color: black; background-color: transparent;">Download CV</a>
-            <a class="white-btn" href="https://www.youtube.com/watch?v=56ph0VueEWw" style="color: black; background-color: transparent;">Showreel</a>
-            <a class="white-btn" href="contact" style="color: black; background-color: transparent;">Contact</a>
+            <!-- Vertically stacked qualification boxes -->
+            <div style="position: relative; display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0;">
+            
+                <div style="position: relative; background-color: #F2F7FF; border: 1px solid #ccc; padding: 1rem 1.5rem; border-radius: 8px;">
+
+                    <div style="position: absolute; top: 1rem; bottom: 0; left: -1.6rem; width: 2px; background-color: #1559EA; border-radius: 1px;"></div><!-- Line  -->
+                    <div style="position: absolute; top: 0.5rem; left: -2rem; width: 0.7rem; height: 0.7rem; background-color: #1559EA; border-radius: 50%; border: 2px solid white; box-sizing: content-box;"></div><!-- Circle  -->
+
+                    <p style="color: black; font-size: 1.2rem; font-weight: 600; margin: 0 0 0.3rem 0;">BSc Bachelor's Degree</p>
+                    <p style="color: #1559EA; font-size: 1.2rem; margin: 0 0 0.3rem 0;">University • 2026 - 2029</p>
+                    <p style="color: #666; font-size: 1rem; margin: 0;">Placeholder</p>
+                </div>
+
+                <div style="position: relative; background-color: #F2F7FF; border: 1px solid #ccc; padding: 1rem 1.5rem; border-radius: 8px;">
+
+                    <div style="position: absolute; top: 1rem; bottom: 0; left: -1.6rem; width: 2px; background-color: #1559EA; border-radius: 1px;"></div><!-- Line  -->
+                    <div style="position: absolute; top: 0.5rem; left: -2rem; width: 0.7rem; height: 0.7rem; background-color: #1559EA; border-radius: 50%; border: 2px solid white; box-sizing: content-box;"></div><!-- Circle  -->
+
+                    <p style="color: black; font-size: 1.2rem; font-weight: 600; margin: 0 0 0.3rem 0;">A Levels</p>
+                    <p style="color: #1559EA; font-size: 1.2rem; margin: 0 0 0.3rem 0;">Sutton Grammar School • 2024 - 2026</p>
+                    <p style="color: #666; font-size: 1rem; margin: 0;">A*A*A - Computer Science, Maths and German</p>
+                </div>
+
+                <div style="position: relative; background-color: #F2F7FF; border: 1px solid #ccc; padding: 1rem 1.5rem; border-radius: 8px;">
+
+                    <div style="position: absolute; top: 1rem; bottom: 0; left: -1.6rem; width: 2px; background-color: #1559EA; border-radius: 1px;"></div><!-- Line  -->
+                    <div style="position: absolute; top: 0.5rem; left: -2rem; width: 0.7rem; height: 0.7rem; background-color: #1559EA; border-radius: 50%; border: 2px solid white; box-sizing: content-box;"></div><!-- Circle  -->
+
+                    <p style="color: black; font-size: 1.2rem; font-weight: 600; margin: 0 0 0.3rem 0;">GCSEs</p>
+                    <p style="color: #1559EA; font-size: 1.2rem; margin: 0 0 0.3rem 0;">Sutton Grammar School • 2019 - 2024</p>
+                    <p style="color: #666; font-size: 1rem; margin: 0;">12 GCSEs Grades: 999998888876 including Maths, Englishes and Sciences</p>
+                </div>
+
+            </div>
+
+            <!--Certifications & Courses-->
+            <p style="font-size: 1.6rem; margin-bottom: 2rem;">
+                Certifications & Courses
+            </p>
+
+            <!-- Flex container for two boxes -->
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                
+                <!-- Box 1 -->
+                <div style="border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; flex: 1 1 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); min-width: 200px; margin: 0 1rem;">
+                    <h3 style="margin-bottom: 0.5rem; color: #1559EA;">CS50x</h3>
+                    <p style="color: #666; font-size: 1rem; margin: 0;">Harvard Online • 2025</p>
+                </div>
+                
+                <!-- Box 2 -->
+                <div style="border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; flex: 1 1 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); min-width: 200px; margin: 0 1rem;">
+                    <h3 style="margin-bottom: 0.5rem; color: #1559EA;">Work Experience</h3>
+                    <p style="color: #666; font-size: 1rem; margin: 0;">CACI Ltd. • 2025</p>
+                </div>
+
+            </div>
         </div>
-    </div>
-
-    <!-- Education -->
-    <div class="container py-5" id="about-me">
-        <h1 style="font-size: 3rem;">Education</h1>
-
-        <!-- Vertically stacked qualification boxes -->
-        <div style="position: relative; display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0;">
         
-            <div style="position: relative; background-color: #F2F7FF; border: 1px solid #ccc; padding: 1rem 1.5rem; border-radius: 8px;">
+        <!-- Professional Experience -->
+        <div class="container py-5" id="work">
+            <h1 style="font-size: 3rem;">Professional Experience</h1>
 
-                <div style="position: absolute; top: 1rem; bottom: 0; left: -1.6rem; width: 2px; background-color: #1559EA; border-radius: 1px;"></div><!-- Line  -->
-                <div style="position: absolute; top: 0.5rem; left: -2rem; width: 0.7rem; height: 0.7rem; background-color: #1559EA; border-radius: 50%; border: 2px solid white; box-sizing: content-box;"></div><!-- Circle  -->
-
-                <p style="color: black; font-size: 1.2rem; font-weight: 600; margin: 0 0 0.3rem 0;">BSc Bachelor's Degree</p>
-                <p style="color: #1559EA; font-size: 1.2rem; margin: 0 0 0.3rem 0;">University • 2026 - 2029</p>
-                <p style="color: #666; font-size: 1rem; margin: 0;">Placeholder</p>
-            </div>
-
-            <div style="position: relative; background-color: #F2F7FF; border: 1px solid #ccc; padding: 1rem 1.5rem; border-radius: 8px;">
-
-                <div style="position: absolute; top: 1rem; bottom: 0; left: -1.6rem; width: 2px; background-color: #1559EA; border-radius: 1px;"></div><!-- Line  -->
-                <div style="position: absolute; top: 0.5rem; left: -2rem; width: 0.7rem; height: 0.7rem; background-color: #1559EA; border-radius: 50%; border: 2px solid white; box-sizing: content-box;"></div><!-- Circle  -->
-
-                <p style="color: black; font-size: 1.2rem; font-weight: 600; margin: 0 0 0.3rem 0;">A Levels</p>
-                <p style="color: #1559EA; font-size: 1.2rem; margin: 0 0 0.3rem 0;">Sutton Grammar School • 2024 - 2026</p>
-                <p style="color: #666; font-size: 1rem; margin: 0;">A*A*A - Computer Science, Maths and German</p>
-            </div>
-
-            <div style="position: relative; background-color: #F2F7FF; border: 1px solid #ccc; padding: 1rem 1.5rem; border-radius: 8px;">
-
-                <div style="position: absolute; top: 1rem; bottom: 0; left: -1.6rem; width: 2px; background-color: #1559EA; border-radius: 1px;"></div><!-- Line  -->
-                <div style="position: absolute; top: 0.5rem; left: -2rem; width: 0.7rem; height: 0.7rem; background-color: #1559EA; border-radius: 50%; border: 2px solid white; box-sizing: content-box;"></div><!-- Circle  -->
-
-                <p style="color: black; font-size: 1.2rem; font-weight: 600; margin: 0 0 0.3rem 0;">GCSEs</p>
-                <p style="color: #1559EA; font-size: 1.2rem; margin: 0 0 0.3rem 0;">Sutton Grammar School • 2019 - 2024</p>
-                <p style="color: #666; font-size: 1rem; margin: 0;">12 GCSEs Grades: 999998888876 including Maths, Englishes and Sciences</p>
-            </div>
-
-        </div>
-
-        <!--Certifications & Courses-->
-        <p style="font-size: 1.6rem; margin-bottom: 2rem;">
-            Certifications & Courses
-        </p>
-
-        <!-- Flex container for two boxes -->
-        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+            <!-- Vertically stacked qualification boxes -->
+            <div style="position: relative; display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0;">
             
-            <!-- Box 1 -->
-            <div style="border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; flex: 1 1 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); min-width: 200px; margin: 0 1rem;">
-                <h3 style="margin-bottom: 0.5rem; color: #1559EA;">CS50x</h3>
-                <p style="color: #666; font-size: 1rem; margin: 0;">Harvard Online • 2025</p>
-            </div>
-            
-            <!-- Box 2 -->
-            <div style="border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; flex: 1 1 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); min-width: 200px; margin: 0 1rem;">
-                <h3 style="margin-bottom: 0.5rem; color: #1559EA;">Work Experience</h3>
-                <p style="color: #666; font-size: 1rem; margin: 0;">CACI Ltd. • 2025</p>
+                <div style="position: relative; background-color: #F7F6FF; border: 1px solid #ccc; padding: 1rem 1.5rem; border-radius: 8px;">
+
+                    <div style="position: absolute; top: 1rem; bottom: 0; left: -1.6rem; width: 2px; background-color: #7127F1; border-radius: 1px;"></div><!-- Line  -->
+                    <div style="position: absolute; top: 0.5rem; left: -2rem; width: 0.7rem; height: 0.7rem; background-color: #7127F1; border-radius: 50%; border: 2px solid white; box-sizing: content-box;"></div><!-- Circle  -->
+
+                    <p style="color: black; font-size: 1.2rem; font-weight: 600; margin: 0 0 0.3rem 0;">Job #1</p>
+                    <p style="color: #7127F1; font-size: 1.2rem; margin: 0 0 0.3rem 0;">Company • 2026 - 2029</p>
+                    <p style="color: #666; font-size: 1rem; margin: 0;">Placeholder</p>
+                </div>
+
+                <div style="position: relative; background-color: #F7F6FF; border: 1px solid #ccc; padding: 1rem 1.5rem; border-radius: 8px;">
+
+                    <div style="position: absolute; top: 1rem; bottom: 0; left: -1.6rem; width: 2px; background-color: #7127F1; border-radius: 1px;"></div><!-- Line  -->
+                    <div style="position: absolute; top: 0.5rem; left: -2rem; width: 0.7rem; height: 0.7rem; background-color: #7127F1; border-radius: 50%; border: 2px solid white; box-sizing: content-box;"></div><!-- Circle  -->
+
+                    <p style="color: black; font-size: 1.2rem; font-weight: 600; margin: 0 0 0.3rem 0;">Job #2</p>
+                    <p style="color: #7127F1; font-size: 1.2rem; margin: 0 0 0.3rem 0;">Company • 2026 - 2029</p>
+                    <p style="color: #666; font-size: 1rem; margin: 0;">Placeholder</p>
+                </div>
+
+                <div style="position: relative; background-color: #F7F6FF; border: 1px solid #ccc; padding: 1rem 1.5rem; border-radius: 8px;">
+
+                    <div style="position: absolute; top: 1rem; bottom: 0; left: -1.6rem; width: 2px; background-color: #7127F1; border-radius: 1px;"></div><!-- Line  -->
+                    <div style="position: absolute; top: 0.5rem; left: -2rem; width: 0.7rem; height: 0.7rem; background-color: #7127F1; border-radius: 50%; border: 2px solid white; box-sizing: content-box;"></div><!-- Circle  -->
+
+                    <p style="color: black; font-size: 1.2rem; font-weight: 600; margin: 0 0 0.3rem 0;">Job #3</p>
+                    <p style="color: #7127F1; font-size: 1.2rem; margin: 0 0 0.3rem 0;">Company • 2026 - 2029</p>
+                    <p style="color: #666; font-size: 1rem; margin: 0;">Placeholder</p>
+                </div>
+
             </div>
 
+            <!--References-->
+            <p style="font-size: 1.6rem; margin-bottom: 2rem;">
+                References
+            </p>
+
+            <!-- Flex container for two boxes -->
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                
+                <!-- Box 1 -->
+                <div style="border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; flex: 1 1 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); min-width: 200px; margin: 0 1rem;">
+                    <h3 style="margin-bottom: 0.5rem; color: #7127F1;">
+                        “Chris is an exceptional professional, consistently approaching every project with dedication and a commitment to excellence.”
+                    </h3>
+                    <div style="height: 1px; background-color: #E1E1E2; margin: 0.5rem 0;"></div>
+                    <p style="color: #666; font-size: 1rem; margin: 0;">Joel Calorte • Owner of Visionary Studios • jsmith@example.com</p>
+                </div>
+                
+                <!-- Box 2 -->
+                <div style="border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; flex: 1 1 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); min-width: 200px; margin: 0 1rem;">
+                    <h3 style="margin-bottom: 0.5rem; color: #7127F1;">“Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet!”</h3>
+                    <div style="height: 1px; background-color: #E1E1E2; margin: 0.5rem 0;"></div>
+                    <p style="color: #666; font-size: 1rem; margin: 0;">John Smith • Company • jsmith@example.com</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- My works and services -->
+        <div class="container py-5" id="services">
+            <h1 style="font-size: 3rem;">My works and services</h1>
+            <p style="font-size: 1.2rem; color: #333;">
+                <br>
+                My works and services will go here!
+            </p>
+        </div>
+
+        <!-- Trusted by world-class companies -->
+        <div class="container py-5" id="social-proof">
+            <h1 style="font-size: 3rem;">Trusted by world-class companies</h1>
+            <p style="font-size: 1.2rem; color: #333;">
+                <br>
+                Trusted by world-class companies will go here!
+            </p>
+        </div>
+
+        <!-- Let's work together! -->
+        <div class="container py-5" id="cta">
+            <h1 style="font-size: 3rem;">Let's work together!</h1>
+            <p style="font-size: 1.2rem; color: #333;">
+                <br>
+                Ready to talk about your project? Let's start a conversation and see how I can help you.
+            </p>
+
+            <div class="button-container" style="margin: 0;">
+                <a class="white-btn" href="contact" style="color: black; background-color: transparent;">Get in touch</a>
+            </div>
         </div>
     </div>
-    
-    <!-- Professional Experience -->
-    <div class="container py-5" id="about-me">
-        <h1 style="font-size: 3rem;">Professional Experience</h1>
-
-        <!-- Vertically stacked qualification boxes -->
-        <div style="position: relative; display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0;">
-        
-            <div style="position: relative; background-color: #F7F6FF; border: 1px solid #ccc; padding: 1rem 1.5rem; border-radius: 8px;">
-
-                <div style="position: absolute; top: 1rem; bottom: 0; left: -1.6rem; width: 2px; background-color: #7127F1; border-radius: 1px;"></div><!-- Line  -->
-                <div style="position: absolute; top: 0.5rem; left: -2rem; width: 0.7rem; height: 0.7rem; background-color: #7127F1; border-radius: 50%; border: 2px solid white; box-sizing: content-box;"></div><!-- Circle  -->
-
-                <p style="color: black; font-size: 1.2rem; font-weight: 600; margin: 0 0 0.3rem 0;">Job #1</p>
-                <p style="color: #7127F1; font-size: 1.2rem; margin: 0 0 0.3rem 0;">Company • 2026 - 2029</p>
-                <p style="color: #666; font-size: 1rem; margin: 0;">Placeholder</p>
-            </div>
-
-            <div style="position: relative; background-color: #F7F6FF; border: 1px solid #ccc; padding: 1rem 1.5rem; border-radius: 8px;">
-
-                <div style="position: absolute; top: 1rem; bottom: 0; left: -1.6rem; width: 2px; background-color: #7127F1; border-radius: 1px;"></div><!-- Line  -->
-                <div style="position: absolute; top: 0.5rem; left: -2rem; width: 0.7rem; height: 0.7rem; background-color: #7127F1; border-radius: 50%; border: 2px solid white; box-sizing: content-box;"></div><!-- Circle  -->
-
-                <p style="color: black; font-size: 1.2rem; font-weight: 600; margin: 0 0 0.3rem 0;">Job #2</p>
-                <p style="color: #7127F1; font-size: 1.2rem; margin: 0 0 0.3rem 0;">Company • 2026 - 2029</p>
-                <p style="color: #666; font-size: 1rem; margin: 0;">Placeholder</p>
-            </div>
-
-            <div style="position: relative; background-color: #F7F6FF; border: 1px solid #ccc; padding: 1rem 1.5rem; border-radius: 8px;">
-
-                <div style="position: absolute; top: 1rem; bottom: 0; left: -1.6rem; width: 2px; background-color: #7127F1; border-radius: 1px;"></div><!-- Line  -->
-                <div style="position: absolute; top: 0.5rem; left: -2rem; width: 0.7rem; height: 0.7rem; background-color: #7127F1; border-radius: 50%; border: 2px solid white; box-sizing: content-box;"></div><!-- Circle  -->
-
-                <p style="color: black; font-size: 1.2rem; font-weight: 600; margin: 0 0 0.3rem 0;">Job #3</p>
-                <p style="color: #7127F1; font-size: 1.2rem; margin: 0 0 0.3rem 0;">Company • 2026 - 2029</p>
-                <p style="color: #666; font-size: 1rem; margin: 0;">Placeholder</p>
-            </div>
-
-        </div>
-
-        <!--References-->
-        <p style="font-size: 1.6rem; margin-bottom: 2rem;">
-            References
-        </p>
-
-        <!-- Flex container for two boxes -->
-        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-            
-            <!-- Box 1 -->
-            <div style="border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; flex: 1 1 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); min-width: 200px; margin: 0 1rem;">
-                <h3 style="margin-bottom: 0.5rem; color: #7127F1;">“Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet!”</h3>
-                <div style="height: 1px; background-color: #E1E1E2; margin: 0.5rem 0;"></div>
-                <p style="color: #666; font-size: 1rem; margin: 0;">John Smith • Company • jsmith@example.com</p>
-            </div>
-            
-            <!-- Box 2 -->
-            <div style="border: 1px solid #ccc; border-radius: 10px; padding: 1.5rem; flex: 1 1 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); min-width: 200px; margin: 0 1rem;">
-                <h3 style="margin-bottom: 0.5rem; color: #7127F1;">“Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet!”</h3>
-                <div style="height: 1px; background-color: #E1E1E2; margin: 0.5rem 0;"></div>
-                <p style="color: #666; font-size: 1rem; margin: 0;">John Smith • Company • jsmith@example.com</p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- My works and services -->
-    <div class="container py-5" id="about-me">
-        <h1 style="font-size: 3rem;">My works and services</h1>
-        <p style="font-size: 1.2rem; color: #333;">
-            <br>
-            My works and services will go here!
-        </p>
-    </div>
-
-    <!-- Trusted by world-class companies -->
-    <div class="container py-5" id="about-me">
-        <h1 style="font-size: 3rem;">Trusted by world-class companies</h1>
-        <p style="font-size: 1.2rem; color: #333;">
-            <br>
-            Trusted by world-class companies will go here!
-        </p>
-    </div>
-
-    <!-- Let's work together! -->
-    <div class="container py-5" id="about-me">
-        <h1 style="font-size: 3rem;">Let's work together!</h1>
-        <p style="font-size: 1.2rem; color: #333;">
-            <br>
-            Ready to talk about your project? Let's start a conversation and see how I can help you.
-        </p>
-
-        <div class="button-container" style="margin: 0;">
-            <a class="white-btn" href="contact" style="color: black; background-color: transparent;">Get in touch</a>
-        </div>
-    </div>
+</div>
 
     <!--
-    <div class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-12">
-
-                <p style="font-size: 1.2rem; color: #333;">
-                    Since 2023, I’ve been freelancing in the VFX space—both independently and as part of Visionary VFX (visionaryvfx.org), a small studio where I’ve contributed to projects across the full production pipeline, from pre-visualization and asset development to compositing and color grading.
-                    This hands-on experience has sharpened my ability to collaborate effectively, adapt quickly, and deliver high-quality results under tight deadlines.
-                <br><br>
-                    I got in contact with the Owner, my good friend Joel Calorte, and he gave me this reference:
-                <br>
-                </p>
-
-                <blockquote class="blockquote ps-3 border-start border-3">
-                    “
-                    <br>
-                        Chris is an exceptional professional, consistently approaching every project
-                        with dedication and a commitment to excellence. He reliably meets deadlines
-                        and delivers work on time, ensuring every project receives his best effort.
-                        Beyond his technical skills, Chris is a humble and kind individual, known for
-                        his collaborative spirit. His 3D work, in particular, stands out for its outstanding
-                        quality and creativity, making him a valuable asset to any team.
-                        Best Regards, Joel Calorte
-                        Owner of Visionary Studios
-                    <br>
-                    ”
-                </blockquote>
-
-                <p style="font-size: 1.2rem; color: #333;">
-                    My core tools include Blender for 3D work and DaVinci Resolve (Fusion) for editing and compositing.
-                    I also have working knowledge of After Effects, Houdini, Nuke, Substance Painter, and Unreal Engine.
-                    While my current focus is on 3D/VFX, my background in computer science gives me an edge when it comes to scripting, pipeline automation, and understanding the technical side of production tools.
-                    I'm always looking for opportunities that push both my creative and technical boundaries.
-                </p>
-
-            </div>
-        </div>
-    </div>
+    Since 2023, I’ve been freelancing in the VFX space—both independently and as part of Visionary VFX (visionaryvfx.org), a small studio where I’ve contributed to projects across the full production pipeline, from pre-visualization and asset development to compositing and color grading.
+    This hands-on experience has sharpened my ability to collaborate effectively, adapt quickly, and deliver high-quality results under tight deadlines.
+    <br><br>
+    I got in contact with the Owner, my good friend Joel Calorte, and he gave me this reference:
+    <br>
+    
+    <blockquote class="blockquote ps-3 border-start border-3">
+    “
+    <br>
+    Chris is an exceptional professional, consistently approaching every project
+    with dedication and a commitment to excellence. He reliably meets deadlines
+    and delivers work on time, ensuring every project receives his best effort.
+    Beyond his technical skills, Chris is a humble and kind individual, known for
+    his collaborative spirit. His 3D work, in particular, stands out for its outstanding
+    quality and creativity, making him a valuable asset to any team.
+    Best Regards, Joel Calorte
+    Owner of Visionary Studios
+    <br>
+    ”
+    </blockquote>
+    My core tools include Blender for 3D work and DaVinci Resolve (Fusion) for editing and compositing.
+    I also have working knowledge of After Effects, Houdini, Nuke, Substance Painter, and Unreal Engine.
+    While my current focus is on 3D/VFX, my background in computer science gives me an edge when it comes to scripting, pipeline automation, and understanding the technical side of production tools.
+    I'm always looking for opportunities that push both my creative and technical boundaries.
     -->
 {% endblock %}
