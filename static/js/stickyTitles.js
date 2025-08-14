@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const titles = document.querySelectorAll('.section-title');
-  const TITLE_HEIGHT = 40;
+  const TITLE_HEIGHT = 60;
 
   const sections = Array.from(titles).map(title => {
     const id = title.dataset.section;
@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title.style.top = '';
       title.style.bottom = '';
       title.style.transform = '';
+      title.classList.remove('active-title'); // Remove when not stuck
     });
 
     const topStuck = [];
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Stick to bottom if sectionTop is below or equal to
       // the stacking position from bottom
-      if (sectionTop >= viewportHeight - bottomOffset - TITLE_HEIGHT - 32) {//total padding is 2rem so -32
+      if (sectionTop >= viewportHeight - bottomOffset - TITLE_HEIGHT - 20) {// - total padding (might have to change if font size changes) should probably remove magic value
         bottomStuck.push(title);
       }
     }
@@ -77,6 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
       title.style.position = 'fixed';
       title.style.top = `${sectionTop}px`;
       title.style.bottom = '';
+
+      title.classList.add('active-title'); // Add when not stuck
     });
   }
 
