@@ -14,14 +14,36 @@ Learn about Christian Boland Ross – a creative technologist combining VFX, cod
 
 
 {% block main %}
+<div class="hero-section d-flex justify-content-center align-items-center text-center bg-body"
+     style="min-height: 65vh;
+            background-image: url(static/media/headshot.jpg);
+            background-size: cover; 
+            background-position: center;">
+
+    <div class="col-md-5 p-lg-5 position-relative">
+        <h1 class="display-4 fw-normal text-white">Christian Boland Ross</h1>
+
+        <p class="lead fw-normal text-white">
+            Specializing in 3D and VFX, I prioritize technical precision to ensure high-quality results.
+        </p>
+
+        <div class="button-container">
+            <a class="white-btn" href="#about-me">View About Me</a>
+        </div>
+
+    </div>
+</div>
+
 <div style="display: flex; min-height: 100vh;">
+
+    
   <!-- Left Sidebar -->
     <div style="position: relative; width: 10rem; padding-left: 6rem; padding-top: 2rem;">
         <div style="position: fixed; top: 0; bottom: 0; left: 6rem; width: 4px; background-color: black; border-radius: 1px;"></div><!-- Line  -->
 
         <a href="#about-me" style="text-decoration: none; color: inherit;"><h1 class="section-title" data-section="about-me" style="padding: 0.5rem; font-size: 3rem;">About Me</h1></a>
         <a href="#education" style="text-decoration: none; color: inherit;"><h1 class="section-title" data-section="education" style="padding: 0.5rem; font-size: 3rem;">Education</h1></a>
-        <a href="#work" style="text-decoration: none; color: inherit;"><h1 class="section-title" data-section="work" style="padding: 0.5rem; font-size: 3rem;">Work</h1></a>
+        <a href="#work" style="text-decoration: none; color: inherit;"><h1 class="section-title" data-section="work" style="padding: 0.5rem; font-size: 3rem;">Proffesional History</h1></a>
         <a href="#services" style="text-decoration: none; color: inherit;"><h1 class="section-title" data-section="services" style="padding: 0.5rem; font-size: 3rem;">Services</h1></a>
         <a href="#social-proof" style="text-decoration: none; color: inherit;"><h1 class="section-title" data-section="social-proof" style="padding: 0.5rem; font-size: 3rem;">Brands</h1></a>
         <a href="#cta" style="text-decoration: none; color: inherit;"><h1 class="section-title" data-section="cta" style="padding: 0.5rem; font-size: 3rem;">Contact</h1></a>
@@ -29,34 +51,6 @@ Learn about Christian Boland Ross – a creative technologist combining VFX, cod
 
     <!-- Right Sidebar -->
     <div style="flex: 1;">
-        <!-- Hero -->
-        <div class="container py-5" id="hero">
-            <div class="row align-items-center">
-                <!-- Left Column: Name -->
-                <div class="col-md-6">
-                    <h1 style="font-size: 3rem;">Christian Boland Ross</h1>
-                    <p style="font-size: 1.2rem; color: var(--dark-grey);">
-                        <br>
-                        Specializing in 3D and VFX, I prioritize technical precision to ensure high-quality results.
-                    </p>
-
-                    <div class="button-container" style="margin: 0;">
-                        <a class="white-btn" href="#about-me" style="color: black; background-color: transparent;">Learn More</a>
-                        <a class="white-btn" href="contact" style="color: white; background-color: var(--cta-blue);">Contact</a>
-                    </div>
-                </div>
-
-                <!-- Right Column: Circular Picture -->
-                <div class="col-md-6 text-center">
-                    <img 
-                        src="static/media/headshot.jpg" 
-                        alt="Christian Boland Ross" 
-                        class="img-fluid" 
-                        style="width: 35rem; height: 35rem; object-fit: cover; border-radius: 15px;"
-                    >
-                </div>
-            </div>
-        </div>
 
         <!-- About Me -->
         <div class="container py-5" id="about-me">
