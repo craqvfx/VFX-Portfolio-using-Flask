@@ -470,6 +470,12 @@ html {
   transition: all 0.3s ease;
 }
 
+.section-title:hover {
+  transition: all 0.2s ease;
+  color: var(--blue-600);
+  transform-origin: left center;
+  transform: scale(1.1) translateX(0.5rem);
+}
 
 .section-title.sticky-top {
   position: fixed;
@@ -485,7 +491,8 @@ html {
 
 .section-title.active-title {
   color: var(--blue-600);
-  transform: scale(1.1) translateX(10px);
+  transform-origin: left center;
+  transform: scale(1.1) translateX(0.5rem);
 }
 
 /* Bootstrap Icons */
