@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Stick to bottom if sectionTop is below or equal to
       // the stacking position from bottom
-      if (sectionTop >= viewportHeight - bottomOffset - TITLE_HEIGHT) {
+      if (sectionTop >= viewportHeight - bottomOffset - TITLE_HEIGHT - 32) {//total padding is 2rem so -32
         bottomStuck.push(title);
       }
     }
