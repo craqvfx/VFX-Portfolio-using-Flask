@@ -12,6 +12,17 @@
   --footer-text: #000000;
   --footer-link: #6c757d;
   --cta-blue: #0d6efd;
+
+  --blue-600: #1559EA;
+  --blue-400: #61A6Fa;
+  --blue-50: #F2F7FF;
+  --violet-600: #7127F1;
+  --violet-400: #9876F9;
+  --violet-50: #F7F6FF;
+
+  --light-grey: #ccc;
+  --middle-grey: #666;
+  --dark-grey: #333;
 }
 
 .dark-mode {
@@ -81,7 +92,7 @@ footer .link-secondary {
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
+  color: var(--dark-grey);
   text-shadow: none; /* Prevent inheritance from `body` */
 }
 
@@ -474,7 +485,7 @@ html {
 
 .section-title.active {
   font-weight: bold;
-  color: #1559EA; /* highlight active section */
+  color: var(--cta-blue); /* highlight active section */
 }
 
 
