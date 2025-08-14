@@ -45,7 +45,7 @@ Browse coding projects including Python tools, creative coding, and web developm
 
                             <div class="repo-links">
                                 <a href="{{ repo['url'] }}" target="_blank" class="github-btn">
-                                    <i class="bi bi-github"></i> View on GitHub
+                                    View on GitHub
                                 </a>
                             </div>
 
@@ -57,7 +57,7 @@ Browse coding projects including Python tools, creative coding, and web developm
                                 </span>
                                 {% endif %}
                                 <span class="updated-at ms-3">
-                                    <i class="bi bi-clock"></i> Updated {{ repo.updated_at }}
+                                    Updated {{ repo.updated_at }}
                                 </span>
                             </div>
 
@@ -68,11 +68,10 @@ Browse coding projects including Python tools, creative coding, and web developm
             </div>
         {% else %}
             <div class="alert alert-warning">
-                <i class="bi bi-cloud-slash"></i> Temporary data unavailable - 
-                GitHub API limits exceeded. Check back soon or 
+                Temporary data unavailable - GitHub API limits exceeded. Check back soon or 
                 <a href="https://github.com/{{ username }}?tab=repositories" target="_blank">
-                    view on GitHub directly
-                </a>.
+                    view on GitHub directly.
+                </a>
             </div>
         {% endif %}
     </div>
