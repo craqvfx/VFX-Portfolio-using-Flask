@@ -10,7 +10,13 @@ Christian Boland Ross | {{ project.title }}
 {% endblock %}
 
 {% block main %}
-    <main>
+<div style="position: fixed; left: 10rem; top: 5.7rem; z-index: 1;" class="button-container">
+  <a class="white-btn" href="vfx_portfolio#projects-section">
+    &#8592; Back to Portfolio
+  </a>
+</div>
+
+
       <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 square-div"
             style="background-image: url(static/media/{{project.id}}/hero.webp); background-size: cover; background-position: center; height: 91vh;">
         <div class="col-md-5 p-lg-5 mx-auto my-5">
@@ -89,8 +95,6 @@ Christian Boland Ross | {{ project.title }}
           </div>
         </div>
       </div>
-
-    </main>
 
 {% endblock%}
 
