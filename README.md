@@ -55,10 +55,10 @@ About Me page rendered using `about_me.hmtl`. It is intended to be as quickly pa
 
 ### UX:
 The General system flow is as follows:
-![UI Flow Diagram]{.github/assets/UI_Flow_Diagram.png}
+![UI Flow Diagram](.github/assets/UI_Flow_Diagram.png)
 
-On each page there is an appropriately placed button leading the user to the next page.<br>
-It is not expected that the user must visit the `About Me` page, that is a voluntary extra.
+On each page there is a cta leading the user to the next page.<br>
+
 
 ### File organisation:
 `/` contains `app.py`, `README.md` etc.<br>
