@@ -48,16 +48,15 @@ This is a gallery of all my projects, rendered by getting all projects from my d
 When `View Project` is clicked for any individual project, it leads you to `/portfolio?project={project_num}`. This is a page dynamically rendered from the database, in which the corresponding images, title and description are displayed using `project.html`.
 
 #### Contact:
-Contact form made using Formspree for a mailmerge. Uses `contact.html`.
+Contact form made using Formspree for a mailmerge. Uses `contact.html`. The 'Contact—' header is not visible on small screens.
 
 #### About Me:
-Simple About Me page rendered using `about_me.hmtl`.
+About Me page rendered using `about_me.hmtl`. It is intended to be as quickly parsible as possible, with summary, education and proffesional history like a CV. The side titles are not visible on small screens.
 
 ### UX:
 The General system flow is as follows:
-```
-Splash screen -> Portfolio -> Individual project -> Contact Me
-```
+![UI Flow Diagram]{.github/assets/UI_Flow_Diagram.png}
+
 On each page there is an appropriately placed button leading the user to the next page.<br>
 It is not expected that the user must visit the `About Me` page, that is a voluntary extra.
 
