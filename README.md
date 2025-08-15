@@ -5,8 +5,7 @@ Web app for my VFX portfolio, made using flask.<br>
 Bootstrap was used for basic CSS styling and as a template, using the [Product Template](https://getbootstrap.com/docs/4.0/examples/product/).
 
 ## TO-DO:
-- update README.md with Coding portfolio
-- refactor About Me section with education, linkedin?, cv, work history etc.
+- webGL eye
 
 ## Directory:<br>
 
@@ -15,7 +14,8 @@ Bootstrap was used for basic CSS styling and as a template, using the [Product T
 [Pages:](#pages)
 - [Standard sections](#standard-sections)
 - [Home](#home)
-- [Portfolio](#portfolio)
+- [VFX Portfolio](#vfx-portfolio)
+- [Coding Portfolio](#coding-portfolio)
 - [Contact](#contact)
 - [About Me](#about-me)
 
@@ -45,9 +45,12 @@ Footer -
 Splash screen with fullscreen showreel playing as background. Centered section has name, brief description and link to portfolio. Uses `index.html`.<br>
 This is the only page that uses `minimalist_layout.html` as the flask template instead of the standard `layout.html`.
 
-#### Portfolio:
+#### VFX:
 This is a gallery of all my projects, rendered by getting all projects from my database `projects.db` and their corresponding images. Uses `portfolio.html`.<br>
 When `View Project` is clicked for any individual project, it leads you to `/portfolio?project={project_num}`. This is a page dynamically rendered from the database, in which the corresponding images, title and description are displayed using `project.html`.
+
+#### Coding:
+This is list of all my github repositories made using the github API. It runs out of requests at 60 calls/hour, at which point it displays an error message with a link directly to my github. Uses `coding_portfolio.html`.
 
 #### Contact:
 Contact form made using Formspree for a mailmerge. Uses `contact.html`. The 'Contact—' header is not visible on small screens.
