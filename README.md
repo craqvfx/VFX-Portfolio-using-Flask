@@ -10,6 +10,8 @@ Bootstrap was used for basic CSS styling and as a template, using the [Product T
 
 ## Directory:<br>
 
+[Docs](https://github.com/craqvfx/VFX-Portfolio-using-Flask/tree/main/docs/)
+
 [Pages:](#pages)
 - [Standard sections](#standard-sections)
 - [Home](#home)
@@ -55,7 +57,7 @@ About Me page rendered using `about_me.hmtl`. It is intended to be as quickly pa
 
 ### UX:
 The General system flow is as follows:
-![UI Flow Diagram](.github/assets/UI_Flow_Diagram.png)
+![UI Flow Diagram](docs/images/UI_Flow_Diagram.png)
 
 On each page there is a cta leading the user to the next page.<br>
 
