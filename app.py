@@ -93,3 +93,6 @@ def sitemap():
 @app.route('/robots.txt')
 def robots():
     return app.send_static_file('robots.txt')
+
+if __name__ == "__main__":
+    app.run(debug=True)
