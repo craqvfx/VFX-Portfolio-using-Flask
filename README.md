@@ -98,6 +98,6 @@ db = SQL("sqlite:////home/craqvfx/VFX-Portfolio-using-Flask/projects.db")
 ##
 
 I hope you like my project and have enjoyed reading the `README.md`! If you have any questions, or wish to contact me, I am available via `cbolandross@gmail.com`, `craqvfx@gmail.com`, or `+44 7857 423006`.<br>
-Alternatively, you can use the [website described in this project](https://craqvfx.pythonanywhere.com/).
+Alternatively, you can use the [website described in this project](https://craqvfx.com/).
 > [!NOTE]
-> If a web page cannot be found at that URL, it may be because I purchased a unique URL. Contact me using the aforementioned details if any issues arise.
+> If a web page cannot be found at that URL, it may be because I changed the URL. Contact me using the aforementioned details if any issues arise.
